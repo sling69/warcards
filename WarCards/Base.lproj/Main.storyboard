@@ -51,7 +51,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5x-pK-qjx" userLabel="PlayButtonContainer">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwJ-ya-lbh" userLabel="PlayRound">
-                                        <state key="normal" title="Play Round"/>
+                                        <state key="normal" title="Deal"/>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -74,6 +74,12 @@
                             <constraint firstAttribute="trailing" secondItem="mda-6P-E7L" secondAttribute="trailing" id="nTb-QE-xcI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="mda-6P-E7L" id="bUa-u6-EQL"/>
+                        <outlet property="firstCardImageView" destination="No8-zy-BtH" id="pB1-52-Gq5"/>
+                        <outlet property="playRoundButton" destination="wwJ-ya-lbh" id="06U-xa-qdV"/>
+                        <outlet property="secondCardImageView" destination="Ivi-XD-0Gs" id="jAG-vh-WCq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
