@@ -18,21 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mda-6P-E7L" userLabel="BackgroundImageView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="mda-6P-E7L" userLabel="BackgroundImageView">
                                 <color key="backgroundColor" red="0.51955542190313142" green="1" blue="0.20363777843329978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIY-0x-M2S" userLabel="CardContainerView">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ivi-XD-0Gs" userLabel="SecondCardImage">
-                                        <color key="backgroundColor" red="1" green="0.10024753418279841" blue="0.099975540867310198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="Ivi-XD-0Gs" userLabel="SecondCardImage">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="170" id="YHL-y1-OHu"/>
                                             <constraint firstAttribute="width" constant="120" id="ZTn-Ww-7OX"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="No8-zy-BtH" userLabel="FirstCardImage">
-                                        <color key="backgroundColor" red="0.62102483083145243" green="1" blue="0.5116420263592818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="tintColor" red="0.62102483083145243" green="1" blue="0.5116420263592818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="No8-zy-BtH" userLabel="FirstCardImage">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="GoU-Kf-3Sm"/>
                                             <constraint firstAttribute="height" constant="170" id="hKg-kp-kuL"/>
@@ -50,13 +47,44 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5x-pK-qjx" userLabel="PlayButtonContainer">
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwJ-ya-lbh" userLabel="PlayRound">
-                                        <state key="normal" title="Deal"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwJ-ya-lbh" userLabel="PlayRound">
+                                        <state key="normal" image="deal"/>
+                                        <connections>
+                                            <action selector="playRoundTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sVd-Qu-Tm6"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qe9-Je-p5P">
+                                        <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kZ-mA-aDI">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3df-Jm-uxL">
+                                        <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enemy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0S-ve-dw9">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="qe9-Je-p5P" firstAttribute="top" secondItem="7kZ-mA-aDI" secondAttribute="bottom" constant="15" id="AJg-Ta-i2G"/>
+                                    <constraint firstItem="qe9-Je-p5P" firstAttribute="centerX" secondItem="7kZ-mA-aDI" secondAttribute="centerX" id="Ao1-AY-crR"/>
+                                    <constraint firstAttribute="bottom" secondItem="3df-Jm-uxL" secondAttribute="bottom" constant="20" id="DiW-TO-hJF"/>
+                                    <constraint firstAttribute="bottom" secondItem="qe9-Je-p5P" secondAttribute="bottom" constant="20" id="OB0-ub-fmM"/>
+                                    <constraint firstItem="qe9-Je-p5P" firstAttribute="leading" secondItem="H5x-pK-qjx" secondAttribute="leading" constant="20" id="STw-rF-fj3"/>
+                                    <constraint firstItem="3df-Jm-uxL" firstAttribute="top" secondItem="O0S-ve-dw9" secondAttribute="bottom" constant="15" id="Xko-Sm-JrJ"/>
                                     <constraint firstItem="wwJ-ya-lbh" firstAttribute="centerY" secondItem="H5x-pK-qjx" secondAttribute="centerY" id="dsa-W3-wUl"/>
                                     <constraint firstItem="wwJ-ya-lbh" firstAttribute="centerX" secondItem="H5x-pK-qjx" secondAttribute="centerX" id="gsc-7U-2sE"/>
+                                    <constraint firstItem="3df-Jm-uxL" firstAttribute="centerX" secondItem="O0S-ve-dw9" secondAttribute="centerX" id="k3u-jO-CdV"/>
+                                    <constraint firstAttribute="trailing" secondItem="3df-Jm-uxL" secondAttribute="trailing" constant="20" id="oV0-5o-uJR"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -76,8 +104,10 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="mda-6P-E7L" id="bUa-u6-EQL"/>
+                        <outlet property="enemyScoreLabel" destination="3df-Jm-uxL" id="qBb-Va-Aib"/>
                         <outlet property="firstCardImageView" destination="No8-zy-BtH" id="pB1-52-Gq5"/>
                         <outlet property="playRoundButton" destination="wwJ-ya-lbh" id="06U-xa-qdV"/>
+                        <outlet property="playerScoreLabel" destination="qe9-Je-p5P" id="KGH-cf-3tL"/>
                         <outlet property="secondCardImageView" destination="Ivi-XD-0Gs" id="jAG-vh-WCq"/>
                     </connections>
                 </viewController>
@@ -86,4 +116,9 @@
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back" width="120" height="170"/>
+        <image name="background" width="333" height="311"/>
+        <image name="deal" width="72" height="22"/>
+    </resources>
 </document>

@@ -12,6 +12,8 @@
 		017F56381DC35C31000F4AE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017F56361DC35C31000F4AE4 /* Main.storyboard */; };
 		017F563A1DC35C31000F4AE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 017F56391DC35C31000F4AE4 /* Assets.xcassets */; };
 		017F563D1DC35C31000F4AE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017F563B1DC35C31000F4AE4 /* LaunchScreen.storyboard */; };
+		01A2FC4C1DC4B30200389AA3 /* ButtonClick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 01A2FC4A1DC4B30200389AA3 /* ButtonClick.wav */; };
+		01A2FC4D1DC4B30200389AA3 /* Underwater Love.wav in Resources */ = {isa = PBXBuildFile; fileRef = 01A2FC4B1DC4B30200389AA3 /* Underwater Love.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		017F56391DC35C31000F4AE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		017F563C1DC35C31000F4AE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		017F563E1DC35C31000F4AE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01A2FC4A1DC4B30200389AA3 /* ButtonClick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonClick.wav; sourceTree = "<group>"; };
+		01A2FC4B1DC4B30200389AA3 /* Underwater Love.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Underwater Love.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		017F56311DC35C31000F4AE4 /* WarCards */ = {
 			isa = PBXGroup;
 			children = (
+				01A2FC491DC4B2B400389AA3 /* Music */,
 				017F56321DC35C31000F4AE4 /* AppDelegate.swift */,
 				017F56341DC35C31000F4AE4 /* ViewController.swift */,
 				017F56361DC35C31000F4AE4 /* Main.storyboard */,
@@ -62,6 +67,15 @@
 				017F563E1DC35C31000F4AE4 /* Info.plist */,
 			);
 			path = WarCards;
+			sourceTree = "<group>";
+		};
+		01A2FC491DC4B2B400389AA3 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				01A2FC4A1DC4B30200389AA3 /* ButtonClick.wav */,
+				01A2FC4B1DC4B30200389AA3 /* Underwater Love.wav */,
+			);
+			name = Music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +137,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01A2FC4D1DC4B30200389AA3 /* Underwater Love.wav in Resources */,
 				017F563D1DC35C31000F4AE4 /* LaunchScreen.storyboard in Resources */,
+				01A2FC4C1DC4B30200389AA3 /* ButtonClick.wav in Resources */,
 				017F563A1DC35C31000F4AE4 /* Assets.xcassets in Resources */,
 				017F56381DC35C31000F4AE4 /* Main.storyboard in Resources */,
 			);
@@ -297,6 +313,7 @@
 				017F56431DC35C31000F4AE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
