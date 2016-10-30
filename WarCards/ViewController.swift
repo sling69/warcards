@@ -32,9 +32,11 @@ class ViewController: UIViewController {
         
         do {
             
-            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "Underwater Love", ofType: "wav")!))
+            
+            //TODO: Reduce volume to ambient
+            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource: "ButtonClick", ofType: "wav")!))
             audioPlayer.prepareToPlay()
-            audioPlayer.play()
+            
         }
         catch {
             print(error)
@@ -53,6 +55,9 @@ class ViewController: UIViewController {
 
     @IBAction func playRoundTapped(_ sender: UIButton) {
     
+        //TODO: Button sound doesnt alays play?? check
+        audioPlayer.play()
+        
         //Randomise  number for the first image view
         let firstRandomNumber:Int = Int(arc4random_uniform(13))
         
